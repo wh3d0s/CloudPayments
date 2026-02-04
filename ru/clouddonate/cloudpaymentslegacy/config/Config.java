@@ -19,6 +19,15 @@ public final class Config {
         Messages.debugDisabled = format(c.getString("messages.debug-disabled"));
         Messages.debugEnabled = format(c.getString("messages.debug-enabled"));
 
+        Messages.Setup.start = format(c.getString("messages.setup.start", "&eНачинаем настройку CloudPayments..."));
+        Messages.Setup.enterShopId = format(c.getString("messages.setup.enter-shop-id", "&eВведите ID магазина:"));
+        Messages.Setup.enterShopKey = format(c.getString("messages.setup.enter-shop-key", "&eВведите API ключ магазина:"));
+        Messages.Setup.enterServerId = format(c.getString("messages.setup.enter-server-id", "&eВведите ID сервера:"));
+        Messages.Setup.finish = format(c.getString("messages.setup.finish", "&aНастройка завершена! Данные сохранены."));
+        Messages.Setup.wrongKeyLength = format(c.getString("messages.setup.failed.wrong-key-length"));
+        Messages.Setup.wrongKeyRegex = format(c.getString("messages.setup.failed.wrong-key-regex"));
+        Messages.Setup.wrongServerId = format(c.getString("messages.setup.failed.wrong-server-id"));
+
         Settings.debug = c.getBoolean("settings.debug-mode");
         Settings.checkUpdates = c.getBoolean("settings.check-updates");
         Settings.requestDelay = c.getLong("settings.request-delay");
@@ -38,6 +47,11 @@ public final class Config {
 
     public static class Messages {
         public static String noPermission, reload, debugDisabled, debugEnabled;
+        
+        public static class Setup {
+            public static String start, enterShopId, enterShopKey, enterServerId, finish;
+            public static String wrongKeyLength, wrongKeyRegex, wrongServerId;
+        }
     }
 
     public static class LocalStorage {

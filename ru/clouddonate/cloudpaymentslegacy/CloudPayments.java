@@ -19,7 +19,7 @@ public final class CloudPayments extends JavaPlugin {
    private JSONConverterService converterService;
    private LocalStorage localStorage;
    private Metrics metrics;
-   private final String version = "1.0-FORK";
+   private final String version = "1.1-FORK";
 
    public void onEnable() {
       this.saveDefaultConfig();
@@ -94,6 +94,6 @@ public final class CloudPayments extends JavaPlugin {
    @Generated
    public String getVersion() {
       this.getClass();
-      return "1.0-FORK";
+      return "1.1-FORK";
    }
 }
